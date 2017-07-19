@@ -4,9 +4,9 @@ export PATH=/usr/local/bin:$PATH
 
 cd ~
 
-# Install homwbrew.
+# Install homebrew.
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew  update
+brew update
 
 # Install python2.
 brew install python
