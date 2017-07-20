@@ -9,6 +9,8 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew update
 
 # Install python2.
+# The python that ships with macOS is linked against an outdated OpenSSL and can
+# no longer make connections to unity3d.com
 brew install python
 
 pip install --upgrade pip
