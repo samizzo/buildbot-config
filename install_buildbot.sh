@@ -12,7 +12,7 @@ install_master () {
     if [ ! -d master ] ; then mkdir master ; fi
     cd master
 
-    virtualenv --no-site-packages sandbox
+    virtualenv --no-site-packages --python=/usr/local/bin/python sandbox
     source sandbox/bin/activate
 
     # Install the buildbot master itself.
@@ -20,6 +20,9 @@ install_master () {
 
     # Install pyjade because we customise some html templates.
     pip install pyjade
+
+    # GitHubAuth requires this.
+    pip install requests
 
     # Create the master
     buildbot create-master master
@@ -31,7 +34,7 @@ install_worker() {
     if [ ! -d worker ] ; then mkdir worker ; fi
     cd worker
 
-    virtualenv --no-site-packages sandbox
+    virtualenv --no-site-packages --python=/usr/local/bin/python sandbox
     source sandbox/bin/activate
 
     # Install the buildbot worker itself.

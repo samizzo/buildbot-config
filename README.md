@@ -9,9 +9,9 @@ The scripts assume you have a user called 'buildbot' on your Mac build machine.
 
 ## Basic installation
 
-1. Copy *initial_setup.sh* and *install_buildbot.sh* to a directory called `bb` in the
-   home directory of your buildbot user.
-2. Run *initial_setup.sh*. This will install homebrew, python2, pip, virtualenv,
+1. Copy *initial_setup.sh* and *install_buildbot.sh* to the home directory of your
+   buildbot user.
+2. Run *initial_setup.sh*. This will install homebrew, python, pip, virtualenv,
    python-dateutil, and xcpretty.
 3. Run *install_buildbot.sh*. This will install master and worker instances of buildbot
    into `$HOME/bb/master` and `$HOME/bb/worker`.
